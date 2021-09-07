@@ -12,8 +12,10 @@
 name: release
 on:
   push:
-    tags:
-      - 'v*'
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
   goreleaser:
     runs-on: ubuntu-latest
